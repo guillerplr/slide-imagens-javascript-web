@@ -6,7 +6,7 @@ export class Slide {
     this.wrapper = document.querySelector(wrapper);
     this.dist = { finalPosition: 0, startX: 0, movement: 0 };
     this.activeClass = `active`;
-    this.changeEvent = new Event('changeEvent');
+    this.changeEvent = new Event("changeEvent");
   }
   onStart(event) {
     let movetype;
@@ -148,7 +148,7 @@ export class Slide {
   }
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
@@ -182,7 +182,7 @@ export class SlideNav extends Slide {
       event.preventDefault();
       this.changeSlide(index);
     });
-    this.wrapper.addEventListener('changeEvent', this.activeControlItem);
+    this.wrapper.addEventListener("changeEvent", this.activeControlItem);
   }
 
   activeControlItem() {
@@ -203,7 +203,5 @@ export class SlideNav extends Slide {
   bindControlEvents() {
     this.eventControl = this.eventControl.bind(this);
     this.activeControlItem = this.activeControlItem.bind(this);
-    
-
   }
 }
