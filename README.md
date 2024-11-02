@@ -1,4 +1,4 @@
-# Slide em JavaScript
+# Slide de imagens em JavaScript
 
 Slide de imagens para o curso de JavaScript completo da Origamid. [http://www.origamid.com](https://www.origamid.com/)
 
